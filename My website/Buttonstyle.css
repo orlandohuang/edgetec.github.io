@@ -1,0 +1,381 @@
+/* Start Document Setup */
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: linear-gradient(135deg, LightSeaGreen, DarkOrchid, LightSeaGreen);
+    font-family: "Poppins", sans-serif;
+    font-size: 12pt;
+    font-style: normal;
+    font-weight: 400;
+}
+
+body::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: black;
+    opacity: 0.6;
+    z-index: -2;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.45s ease-in-out !important;
+    margin: 30px;
+    z-index: 1;
+}
+
+a:active {
+    transform: scale(0.93);
+}
+
+a:hover {
+    transition: all 0.45s ease-in-out !important;
+}
+
+i {
+    transition: all 0.45s ease-in-out !important;
+}
+
+a:hover i {
+    transition: all 0.45s ease-in-out !important;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1100px) {
+    .buttons-container {
+        width: 90%;
+    }
+}
+
+
+/* SHINELI BUTTON */
+
+.shineli-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: white;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0px red;
+    box-shadow: red -1px 1px, red -1px -1px, red 1px -1px, red 5px 5px;
+}
+
+.shineli-btn:hover {
+    letter-spacing: 4px;
+    width: 220px;
+    text-decoration: 2px dashed underline red;
+    padding: 5px 50px 0px 0px;
+    box-shadow: red 5px 0px, red 5px -5px, red 0px 0px, red 5px 0px;
+}
+
+.shineli-btn::after {
+    content: "";
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    background: linear-gradient( 68deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 20px, red 20px, red 50px, rgba(0, 0, 0, 0) 90px, rgba(0, 0, 0, 0) 90px);
+    background-size: 100%;
+    background-repeat: repeat;
+    z-index: -1;
+    border: 11px solid transparent;
+    transition: all 0.6s ease-in-out;
+}
+
+.shineli-btn:hover.shineli-btn::after {
+    background-size: 10%;
+    background-position: 20%;
+    transition: all 0.6s ease-in-out;
+    transform: scale(2);
+}
+
+
+/* BORDELI BUTTON */
+
+.bordeli-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    background: transparent;
+    border: 1px dashed white;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.bordeli-btn:hover {
+    background: white;
+    color: white;
+    border: 60px solid hotpink;
+    font-style: italic;
+}
+
+
+/* FLOWRINO BUTTON */
+
+.flowrino-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    font-weight: 200;
+    font-size: 14pt;
+    background: linear-gradient(to right, Tomato, DarkOrange, Crimson, Tomato);
+    background-size: 600% 600%;
+    border: 1px solid transparent;
+    animation: gradient 30s linear infinite;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.flowrino-btn:hover {
+    background: linear-gradient( to right, CornflowerBlue, Aqua, DeepPink, CornflowerBlue);
+    background-size: 600% 600%;
+    animation: gradient 20s linear infinite;
+    filter: drop-shadow(0px 0px 30px CornflowerBlue);
+    font-weight: 400;
+    text-shadow: 0px 0px 3px CornflowerBlue;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 600% 50%;
+    }
+}
+
+
+/* GRIDEL BUTTON */
+
+.gridel-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    background-color: RebeccaPurple;
+    background-image: url("https://www.transparenttextures.com/patterns/grid-me.png");
+    background-size: 18px;
+    background-position: center;
+    border: 1px solid DimGray;
+    color: white;
+    text-shadow: 1px 1px 0px Purple, 2px 2px 0px Purple;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.gridel-btn:hover {
+    background-size: 210px;
+    height: 80px;
+    font-size: 16pt;
+    font-weight: 200;
+    text-shadow: none;
+}
+
+
+/* HAMBURGER BUTTON */
+
+.hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    background: transparent;
+    color: black;
+    border-radius: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    border-top: 10px solid Gold;
+    border-bottom: 10px solid Gold;
+}
+
+.hamburger-btn::before {
+    content: "";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15px;
+    background: Gold;
+    position: absolute;
+    z-index: -1;
+    top: 26%;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.hamburger-btn:hover {
+    padding: 50px 0px;
+    letter-spacing: 3px;
+    text-shadow: none;
+    color: Gold;
+    border-top: 10px solid DarkGoldenRod;
+    border-bottom: 10px solid DarkGoldenRod;
+}
+
+.hamburger-btn:hover.hamburger-btn::before {
+    height: 50px;
+    transition: all 0.4s ease-in-out;
+    top: 23%;
+    left: -2px;
+    background: SaddleBrown;
+    border: 2px dotted green;
+}
+
+
+/* DOTRINO BUTTON */
+
+.dotrino-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    border: 3px dashed Fuchsia;
+    color: white;
+    text-shadow: 1px 1px 0px Fuchsia, 2px 2px 0px Fuchsia, 3px 3px 0px Fuchsia, 4px 4px 0px Fuchsia, 5px 5px 0px Fuchsia, 6px 6px 0px Fuchsia, 7px 7px 0px Fuchsia, 8px 8px 0px Fuchsia, 9px 9px 0px Fuchsia, 10px 10px 0px Fuchsia, 11px 11px 0px Fuchsia, 12px 12px 0px Fuchsia, 13px 13px 0px Fuchsia, 14px 14px 0px Fuchsia, 15px 15px 0px Fuchsia, 16px 16px 0px Fuchsia, 17px 17px 0px Fuchsia, 18px 18px 0px Fuchsia, 19px 19px 0px Fuchsia, 20px 20px 0px Fuchsia;
+    font-size: 20pt;
+    font-weight: 600;
+    box-shadow: rgba(255, 255, 255, 0.4) 5px 5px;
+}
+
+.dotrino-btn:hover {
+    border: 10px dotted Fuchsia;
+    font-size: 14pt;
+    text-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+/* FLOOPER BUTTON */
+
+.flooper-btn {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    border-radius: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flooper-btn:hover {
+    border-radius: 0px;
+}
+
+.flooper-btn::before {
+    content: "";
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    width: 200px;
+    height: 50px;
+    background: black;
+    transition: all 0.6s ease-in-out;
+}
+
+.flooper-btn:hover:before {
+    background: white;
+    border-radius: 0px;
+    transition: all 0.6s ease-in-out;
+}
+
+.flooper-btn::after {
+    content: "flooper";
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 100px;
+    border: 1px solid LawnGreen;
+    color: white;
+    text-shadow: 1px 1px 0px black;
+    font-weight: 400;
+    font-size: 12pt;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient( 30deg, rgba(0, 0, 0, 0) 0px, LawnGreen 15px, rgba(0, 0, 0, 0) 30px, rgba(0, 0, 0, 0) 45px, LawnGreen 70px, rgba(0, 0, 0, 0) 49px);
+    background-size: 2px;
+    background-position: top right;
+    background-repeat: repeat;
+    z-index: 10;
+    transition: all 0.6s ease-in-out;
+}
+
+.flooper-btn:hover::after {
+    background-size: 20%;
+    text-shadow: 1px 1px 0px white;
+    background-position: center;
+    border-radius: 0px;
+    color: black;
+    border: 1px solid black;
+    transform: rotateX(360deg);
+    box-shadow: 1px 1px 0px LawnGreen, 2px 2px 0px LawnGreen, 3px 3px 0px LawnGreen, 4px 4px 0px LawnGreen, 5px 5px 0px LawnGreen, 6px 6px 0px LawnGreen;
+    transition: all 0.6s ease-in-out;
+}
